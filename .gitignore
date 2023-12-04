@@ -1,0 +1,19 @@
+# Airflow SQLite database
+airflow.db
+
+# Ignore compiled Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore virtual environment
+venv/
+env/
+
+# Ignore logs and other generated files
+logs/
+*.log
+
+# Ignore local settings
+*.env
