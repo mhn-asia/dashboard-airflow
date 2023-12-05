@@ -111,7 +111,7 @@ task_script10 = PythonOperator(
 )
 
 task_script11 = PythonOperator(
-    task_id='vaccine_administered_script',
+    task_id='sub_record_script',
     python_callable=get_sub_record_update,
     provide_context=True,
     dag=dag,
@@ -138,3 +138,4 @@ task_script13 = PythonOperator(
 
 # task order
 task_script1 >> task_script2 >> task_script3
+task_script1 >> [task_script4,task_script5,task_script6,task_script7,task_script8,task_script9,task_script10,task_script11,task_script12,task_script13]
